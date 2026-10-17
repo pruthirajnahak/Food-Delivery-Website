@@ -35,6 +35,7 @@ a{
 .flex{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
 }
 
@@ -66,8 +67,22 @@ img{
     height: auto;
     display: block; 
 
-
 }
+
+
+.p-top{
+    padding-top: 10rem;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.mt-4{
+    margin-top: 4rem;
+}
+
+
 
 
 /* HEADER STYLING  */
@@ -144,8 +159,11 @@ img{
 }
 
 .content,
-.image-container{
+.image-container,
+.service-card{
     flex: 1;
+    flex-basis: 300px;
+
 }
 
 h1{
@@ -178,9 +196,44 @@ p{
    font-size: 1.2rem;
    text-align: center;
    line-height: 3rem;
+   box-shadow: rgba(0, 0, 0, 0.1) 0 2px 1px ;
+   transition: .3s ease-in-out;
 }
 
+.social-icon:hover{
+    background-color: var(--lead);
+    color: var(--pure-white);
+    transition: .3s ease-in-out;
+}
 
+/* SECTION 1 */
+ 
+h5{
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+    color: var(--gold-finger);
+    text-transform: uppercase;
+
+}
+
+h2{
+    font-size: 3.7rem;
+    text-transform: capitalize;
+    color:var(--lead);
+
+}
+
+h3{
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: var(--leed);
+}
+
+.service-card h3{
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+
+}
 
 
 
@@ -224,6 +277,9 @@ p{
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 780px){
+
+    /* HEADER STYLING  */
+
     .navlist,
     .desktop-action .btn{
         display: none;
@@ -256,5 +312,24 @@ p{
         left: 50%;
         transform: translateX(-50%);
         transition: .3s ease-in-out;
+    }
+
+    /* SECTION STYLING  */
+
+    h1{
+        font-size: 3.6rem;
+    }
+
+    .content{
+        padding-top: 3rem;
+
+    }
+
+    .gap-2{
+        gap: 1.5rem;
+    }
+
+    .gap-4{
+        gap: 4rem;
     }
 }
